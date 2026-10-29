@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #0b0d13;
+    --foreground: #f1f5f9;
+    --card: #141721;
+    --card-foreground: #f1f5f9;
+    --card-border: #1f2433;
+    --primary: #ff4d36;
+    --primary-hover: #ff634f;
+    --primary-foreground: #ffffff;
+    --success: #10b981;
+    --success-foreground: #047857;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --muted: #1c2130;
+    --muted-foreground: #94a3b8;
+    --border: #23293b;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0d13;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2433;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e364d;
+}
+
+/* Glass & Card Glow Effects */
+.card-subly {
+  background-color: #141721;
+  border: 1px solid #1f2433;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+}
+
+.card-subly-hover {
+  transition: all 0.2s ease-in-out;
+}
+.card-subly-hover:hover {
+  border-color: #2e364d;
+  transform: translateY(-1px);
+}
+
+.glow-coral {
+  box-shadow: 0 0 25px -5px rgba(255, 77, 54, 0.35);
+}
+
+.glow-green {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3);
+}
